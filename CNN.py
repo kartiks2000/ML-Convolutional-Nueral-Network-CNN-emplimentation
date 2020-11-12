@@ -32,6 +32,10 @@ tf.__version__
 # Generating and Importing datset images
 
 # Generating images for the Training set
+# known as Image Augmentation
+# its not possible to get images with different orientations to train.
+# this function generated new vairiations of the train set by tilting.rotation,sheering,zooming etc on the given datset to increase vairiarions for better training.
+# Go to the Keras docs to check and copy code.
 train_datagen = ImageDataGenerator(rescale = 1./255,
                                    shear_range = 0.2,
                                    zoom_range = 0.2,
